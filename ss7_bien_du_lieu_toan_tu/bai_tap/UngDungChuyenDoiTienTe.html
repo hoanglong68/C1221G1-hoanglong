@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table cellpadding="10" style="border-collapse: collapse">
+    <form>
+        <tr style="font-size: x-large">
+            <th>Amount</th>
+            <th width="70"></th>
+            <th>From Currency</th>
+            <th width="70"></th>
+            <th>To Currency</th>
+            <th width="70"></th>
+            <th></th>
+        </tr>
+        <tr>
+            <td><input type="number" id="tien"></td>
+            <td width="70"></td>
+            <td>
+                <select id="giaTri1">
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                </select>
+            </td>
+            <td width="70"></td>
+            <td>
+                <select id="giaTri2">
+                    <option value="USD">USD</option>
+                    <option value="VND">VND</option>
+                </select>
+            </td>
+            <td width="70"></td>
+            <td>
+            </td>
+        </tr>
+        <br>
+    </form>
+</table>
+<br>
+<button onclick="chuyenDoiTienTe()">Convert</button>
+<br><br>
+<div id="convert"></div>
+
+<script>
+    function chuyenDoiTienTe() {
+        let x = document.getElementById('tien').value;
+        let s1 = document.getElementById('giaTri1').value;
+        let s2 = document.getElementById('giaTri2').value;
+        if (s1 == s2)
+            document.write('result '+ x)
+        else if (s1 == "VND" && s2 == "USD")
+            document.write('result '+ x / 23000);
+        else
+            document.write('result '+ x * 23000);
+
+    }
+
+
+</script>
+</body>
+
+</html>
