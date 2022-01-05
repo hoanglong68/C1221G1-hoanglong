@@ -15,36 +15,39 @@
 <button type="button" onclick="tru()">Subtraction(-)</button>
 <button type="button" onclick="nhan()">Multiplication(X)</button>
 <button type="button" onclick="chia()">Division(/)</button>
-
+<p id="display"></p>
 </body>
 <script>
     function cong() {
         let s1 = parseInt(document.getElementById('value1').value);
         let s2 = parseInt(document.getElementById('value2').value);
         let a = (s1 + s2)
-        document.write("result " + a)
+        // document.write("result " + a)
+        document.getElementById('display').innerHTML = "result" + a
     }
 
     function tru() {
         let s1 = parseInt(document.getElementById('value1').value);
         let s2 = parseInt(document.getElementById('value2').value);
         let a = (s1 - s2)
-        document.write("result " + a)
+        // document.write("result " + a)
+        document.getElementById('display').innerHTML = "result" + a
     }
 
     function nhan() {
         let s1 = parseInt(document.getElementById('value1').value);
         let s2 = parseInt(document.getElementById('value2').value);
         let a = (s1 * s2)
-        document.write("result " + a)
+        // document.write("result " + a)
+        document.getElementById('display').innerHTML = "result" + a
     }
 
     function chia() {
         let s1 = parseInt(document.getElementById('value1').value);
         let s2 = parseInt(document.getElementById('value2').value);
         let a = (s1 / s2)
-        document.write("result " + a)
+        // document.write("result " + a)
+        document.getElementById('display').innerHTML = "result" + a
     }
-
 </script>
 </html>

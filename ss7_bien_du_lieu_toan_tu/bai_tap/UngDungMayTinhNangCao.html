@@ -11,14 +11,31 @@
     <input type="number" id="value2">
 </form>
 <br>
-<button type="button" onclick="cong()">Addition(+)</button>
-<button type="button" onclick="tru()">Subtraction(-)</button>
-<button type="button" onclick="nhan()">Multiplication(X)</button>
-<button type="button" onclick="chia()">Division(/)</button>
+<button type="button" onclick="tinhToan('+')">Addition(+)</button>
+<button type="button" onclick="tinhToan('-')">Subtraction(-)</button>
+<button type="button" onclick="tinhToan('*')">Multiplication(X)</button>
+<button type="button" onclick="tinhToan('/')">Division(/)</button>
+<!--truyền gọi số vào từng chức năng của button-->
+<p id="display"></p>
 </body>
 <script>
-function f() {
+    // trong function gọi 1 tham số n rồi xét khi n bằng gọi số phía trên button xét theo điều kiện if
+    function tinhToan(n) {
+        let s1 = parseInt(document.getElementById('value1').value);
+        let s2 = parseInt(document.getElementById('value2').value);
+        let x
+        if (n == '+') {
+            x = s1 + s2
+        } else if (n == '-') {
+            x = s1 - s2
+        } else if (n == '*') {
+            x = s1 * s2
+        } else if (n == '/') {
+            x = s1 / s2
+        }
+        document.getElementById("display").innerHTML = "result " + x
 
-}
+
+    }
 </script>
 </html>
