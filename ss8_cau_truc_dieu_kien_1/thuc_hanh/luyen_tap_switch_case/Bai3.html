@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let x = parseInt(prompt("number here"),0)
+    // if (x > 0){
+    //     alert(1)
+    // }else if (x <0){
+    //     alert(-1)
+    // }else alert(0)
+    let x = parseInt(prompt("number here"),0)
+    //toán tử 3 ngôi : nếu x > 0 đúng thì trả về 1 sai sẽ vào case nếu x < 0 đúng thì trả về -1 sai thì về 0
+    //witch x sẽ nhận giá trị trong ô khi x thay đổi tuỳ theo số nhập 0,-1,1 rồi đưa xuống từng case
+    switch (x > 0 ? 1 : x < 0 ? -1 : 0) {
+        case (1):
+            alert(1)
+            break
+        case (-1):
+            alert(-1)
+            break
+        default :
+            0
+    }
+
+</script>
+</body>
+</html>
