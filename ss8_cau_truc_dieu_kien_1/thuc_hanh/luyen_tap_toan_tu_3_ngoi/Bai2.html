@@ -6,6 +6,10 @@
 </head>
 <body>
 <script>
+    // gắn phương thức nhập cho biến login. nếu nhập employee vào login thì sẽ báo hello, ngược lại nếu nhập
+    // director thì sẽ hiện greetings, ngược lại nếu ko nhập j cả thì sẽ hiện no login, trường hợp cuối cùng là
+    // nhập ko khớp các trường hợp trên nên sẽ báo rỗng
+    // tất cả đều gán cho biến message để alert hiện thị message
     let login = prompt("input here")
    let message = (login == "employee") ?
        "hello" : (login == "director") ?

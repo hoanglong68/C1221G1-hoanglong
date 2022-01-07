@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let tienGoc = parseFloat(prompt("nhập số tiền"))
+    let thang = parseInt(prompt("nhập số tháng"))
+    let i = 0.1;
+
+//    i là lãi xuất hàng tháng
+//    công thức lãi kép = tiền gốc . (1+ lãi xuất/số lần gộp lãi) ^ (tháng kí gửi * số lần gộp lãi)
+let tienlai = 1000 * (Math.pow((1 + i/0.5), (thang * 4)))
+    document.write("số tiền lãi nhận được "+ tienlai)
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="docReady()">
+<img id="nobita" src="https://james.codegym.vn/pluginfile.php/27447/mod_assign/intro/1.png"
+     style="position: absolute; left: 0;top: 0; height: 100px; width: 80px">
+<script>
+    // gọi function mũi tên đi lên, gọi id nobita gán cho biến element
+    //biến element thuộc tính đi lên, nhận giá trị mỗi lần là -5 để đi xuống dưới
+    function UpArrowPressed() {
+        let element = document.getElementById("nobita");
+        element.style.top = parseInt(element.style.top) - 5 + 'px';
+    }
+    function downArrowPressed() {
+        let element = document.getElementById("nobita");
+        element.style.top = parseInt(element.style.top) + 5 + 'px';
+    }
+
+    function leftArrowPressed() {
+        let element = document.getElementById("nobita");
+        element.style.left = parseInt(element.style.left) - 5 + 'px';
+    }
+
+    function rightArrowPressed() {
+        let element = document.getElementById("nobita");
+        element.style.left = parseInt(element.style.left) + 5 + 'px';
+    }
+    // function moveselection truyền tham số evt. keycode là 1 bảng quy ước sãn
+    // với các trường hợp 37 39 38 40 là trái phải lên xuống trong bảng keycode
+    function moveSelection(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                leftArrowPressed();
+                break;
+            case 39:
+                rightArrowPressed();
+                break;
+            case 38:
+                UpArrowPressed();
+                break;
+            case 40:
+                downArrowPressed();
+                break;
+        }
+    }
+    //  gọi function doready ở thẻ body. khi window load đẩy đủ sẽ gọi sự kiện keydown với chức năng moveselection
+    // oload hay document.ready là thẻ thuộc tính khi trang web tải đẩy đủ mới bắt đầu chạy code
+    function docReady() {
+        window.addEventListener('keydown', moveSelection);
+    }
+
+</script>
+</body>
+</html>

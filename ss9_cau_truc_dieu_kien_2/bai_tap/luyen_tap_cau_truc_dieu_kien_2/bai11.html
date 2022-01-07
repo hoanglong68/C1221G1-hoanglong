@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let thuNhap = parseFloat(prompt("nhập số thu nhập"))
+    if (thuNhap <= 3) {
+        alert("không phải nộp thuế")
+    } else if (thuNhap <= 7) {
+        alert("thuế phải thu " + thuNhap / 100 * 5);
+
+    } else if (thuNhap <= 15) {
+        alert("thuế phải thu " + thuNhap / 100 * 10);
+
+    } else alert("thuế phải thu " + thuNhap / 100 * 12);
+</script>
+</body>
+</html>
