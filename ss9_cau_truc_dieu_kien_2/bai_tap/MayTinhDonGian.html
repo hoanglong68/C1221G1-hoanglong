@@ -10,34 +10,48 @@
        <td colspan="4"><input id="window"></td>
     </tr>
     <tr>
-    <td><button>1</button></td>
-    <td><button>2</button></td>
-    <td><button>3</button></td>
-    <td><button>+</button></td>
+<!-- truyền hàm this.value là thay thế hàm documentbyid khi thực hiện ngay trên thẻ button ko cần gọi function
+khi sự kiện onlick thực hiện sẽ truyền giá trị value đã gắn vào ô input được đặt function ở dưới-->
+    <td><button onclick="click1(this.value)" value="1">1</button></td>
+    <td><button onclick="click1(this.value)" value="2">2</button></td>
+    <td><button onclick="click1(this.value)" value="3">3</button></td>
+    <td><button onclick="click1(this.value)" value="+">+</button></td>
     </tr>
     <tr>
-        <td><button>4</button></td>
-        <td><button>5</button></td>
-        <td><button>6</button></td>
-        <td><button>-</button></td>
+        <td><button onclick="click1(this.value)" value="4">4</button></td>
+        <td><button onclick="click1(this.value)" value="5">5</button></td>
+        <td><button onclick="click1(this.value)" value="6">6</button></td>
+        <td><button onclick="click1(this.value)" value="-">-</button></td>
     </tr>
     <tr>
-        <td><button>7</button></td>
-        <td><button>8</button></td>
-        <td><button>9</button></td>
-        <td><button>*</button></td>
+        <td><button onclick="click1(this.value)" value="7">7</button></td>
+        <td><button onclick="click1(this.value)" value="8">8</button></td>
+        <td><button onclick="click1(this.value)" value="9">9</button></td>
+        <td><button onclick="click1(this.value)" value="*">*</button></td>
     </tr>
     <tr>
-        <td><button>c</button></td>
-        <td><button>0</button></td>
-        <td><button onclick="bang">=</button></td>
-        <td><button>/</button></td>
+        <td><button onclick="xoa()" value="c">c</button></td>
+        <td><button onclick="click1(this.value)" value="0">0</button></td>
+        <td><button onclick="equal()" value="=">=</button></td>
+        <td><button onclick="click1(this.value)" value="/">/</button></td>
     </tr>
 </table>
 <script>
-function bang(so) {
-let n = document.getElementById("window").value;
-document.getElementById("window").value = n +
+//gắn biến nhapso cho ô hiển thị window. ô hiển thị sẽ hiện thị nhập số + số khi bấm button
+function click1(so) {
+let nhapSo = document.getElementById("window").value;
+document.getElementById("window").value = nhapSo + so;
+}
+// gắn function cho nút bằng. gắn biến str cho đoạn số đã show. lúc này gắn hàm eval(là hàm js tự động tính toán)
+// cho giá trị. hiện thị giá trị trên window khi bấm nút bằng sau khi đã qua xử lý hàm eval
+function equal() {
+let str = document.getElementById("window").value;
+let giaTri = eval (str);
+document.getElementById("window").value = giaTri
+}
+// gắn function cho nút xoá. khi bấm nút xoá thì sẽ hiển thị trên window là khoảng trống ""
+function xoa() {
+document.getElementById("window").value = ""
 }
 </script>
 </body>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // gán tạo bảng với các thuộc tính cho biến bang. khai báo bien dong và biến cot
+    // vòng lặp for dong để tạo 10 dòng. thêm thẻ tr + cộng dồn trong bảng và đặt trong vòng lặp for
+    //thêm 1 vòng lặp for nữa trong vòng lặp <tr> để tạo các <td>
+    // trong thẻ <td> giá trị theo bài sẽ là dòng * cột
+    // thêm các thẻ </tr> và thẻ </td> khi lặp
+    let bang = "<table border='1' width='300' cellspacing='0' cellpadding='3'>"
+    let dong
+    let cot
+    // for (dong = 1; dong <=10;dong++){
+    //     bang = bang + "<tr>";
+    //     for (cot = 1; cot <=10;cot++){
+    //         bang = bang + "<td>" + dong * cot + "</td>"
+    //     }bang = bang + "</tr>"
+    // }bang = bang + "</table>"
+    //     document.write(bang)
+    dong = cot = 1;
+    while (dong <= 10) {
+        bang = bang + "<tr>";
+        cot = 1;
+        while (cot <= 10) {
+            bang = bang + "<td>" + dong * cot + "</td>";
+            cot++;
+        }
+        bang = bang + "</tr>";
+
+        dong++;
+    }
+        bang = bang + "</table>"
+
+    document.write(bang)
+</script>
+</body>
+</html>
