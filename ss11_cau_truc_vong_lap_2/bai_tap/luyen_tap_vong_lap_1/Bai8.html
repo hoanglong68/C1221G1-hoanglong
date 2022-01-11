@@ -12,25 +12,27 @@
         let random = Math.ceil(max * Math.random());
         // ceil 7.1 =>8; ground 7.8 => 7
         alert(random)
-        let yourNum;
+        let yourNum = parseInt(prompt("nhập số dự đoán"))
         let count = 1
-        do {
-            yourNum = parseInt(prompt("nhập số bạn dự đoán lần" + count));
+        for (let i = 1;; i++) {
             count++
-            if (yourNum == random)
+            if (yourNum == random) {
+                alert("bạn đã thắng!")
                 break
-            if (count == 3) {
-                alert("bạn đã vượt qá số lần dự đoán")
-                break
-            }
-            alert("bạn đã nhập sai quá số lần")
-            if (yourNum > random) {
-                alert("bạn đã dự đoán lớn hơn");
             } else if (yourNum < random) {
-                alert("bạn đã dự đoán bé hơn");
+                alert("bạn đã dự đoán thấp hơn")
+                yourNum = parseInt(prompt("dự đoán lại"))
+            } else if (yourNum > random) {
+                alert("bạn đã dự đoán cao hơn")
+                yourNum = parseInt(prompt("dự đoán lại"))
+
             }
-            while (true) alert("bạn đã chiến thắng");
+         if (count == 3 ) {
+             alert("bạn đã thua")
+             break
+         }
         }
+    }
 </script>
 </body>
 </html>
