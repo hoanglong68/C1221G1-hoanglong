@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="choi()">Chơi!</button>
+<script>
+    function choi() {
+        let max = prompt("nhập khoảng số")
+        let random = Math.ceil(max * Math.random());
+        // ceil 7.1 =>8; ground 7.8 => 7
+        alert(random)
+        let yourNum;
+        let count = 1
+        do {
+            yourNum = parseInt(prompt("nhập số bạn dự đoán lần" + count));
+            count++
+            if (yourNum == random)
+                break
+            if (count == 3) {
+                alert("bạn đã vượt qá số lần dự đoán")
+                break
+            }
+            alert("bạn đã nhập sai quá số lần")
+            if (yourNum > random) {
+                alert("bạn đã dự đoán lớn hơn");
+            } else if (yourNum < random) {
+                alert("bạn đã dự đoán bé hơn");
+            }
+            while (true) alert("bạn đã chiến thắng");
+        }
+</script>
+</body>
+</html>

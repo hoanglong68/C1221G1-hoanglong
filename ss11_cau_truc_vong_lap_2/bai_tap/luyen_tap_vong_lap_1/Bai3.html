@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // gán biết so1 = 0 so2 = 1 nextNum là số hạng tiếp theo
+    // cho vòng lặp chạy và viết ra số hạng đầu tiên khi vòng lặp chạy đc vòng đầu tiên
+    // thì tổng so1 và so2 gán cho nextNum
+    // so2 sẽ trở thành so1 và nextNum sẽ trở thành số 2
+    // điều kiện dừng vòng lặp là i <= số fibo mà người nhập muốn thể hiện vd 20 số i <= 20
+    let num = parseInt(prompt("nhập số fibo muốn hiện"))
+    let so1 = 0
+    let so2 = 1
+    let nextNum
+    for (let i = 1;i <= num; i++){
+        document.write(so1);
+        document.write("<br>")
+        nextNum = so1 + so2
+        so1 = so2
+        so2 = nextNum
+    }
+</script>
+</body>
+</html>
