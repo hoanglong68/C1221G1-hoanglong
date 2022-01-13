@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let n;
+    // let flag;
+    // do {
+    //     n = (prompt("nhập độ dài mảng"));
+    //     flag = (parseInt(n) == n) && n > 0;
+    // } while (!flag);
+    // n = parseInt(n);
+    // let arr = new Array(n);
+    // for (let i = 0; i < arr.length; i++) {
+    //     arr[i] = parseInt(prompt("nhập phần tử thứ: " + i));
+    // }
+
+
+    //tạo vòng lặp for duyệt mảng arr
+    //nếu v = phần tử i trong mảng arr, tạo thêm 1 vòng lặp nữa, gán j = i
+    //lúc này vị trí của v cũng là vị trí j trong mảng
+    // cho vòng lặp chạy đến arr.length-1 => chừa lại 1 vì đằng nào cũng gán giá trị cuối cùng cho 0
+    //gán giá trị bên phải v cho v ( lúc này v là arr[j] và bên phải là arr[j+1]
+    //sau khi kết thúc vòng lặp
+    //giá trị cuối cùng của mảng arr gán cho = 0
+    //giảm i đi 1 đơn vị
+    let arr = [2, 5, 6, 7, 8, 3, 4, 12, 11, 14];
+    let v = parseInt(prompt("value V"));
+    for (let i = 0; i < arr.length; i++) {
+        if (v == arr[i]) {
+            for (let j = i; j < arr.length - 1; j++) {
+                arr[j] = arr[j + 1];
+            }
+            arr[arr.length - 1] = 0;
+            i++
+        }
+    }
+    alert("mảng sau khi xoá " + arr)
+</script>
+</body>
+</html>
