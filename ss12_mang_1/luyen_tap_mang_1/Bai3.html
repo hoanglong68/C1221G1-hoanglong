@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let so = [10, 12, 42, 55, 66, 12, 1, 5, 8, 11];
+    let max = so[0];
+    let total = 0;
+    for (let i = 0; i < so.length; i++) {
+        if (so[i] > max) {
+            max = so[i];
+            total = total + so[i];
+        }
+    }
+    alert("số lớn nhất: " + max + " trung bình cộng" + total / so.length);
+</script>
+</body>
+</html>

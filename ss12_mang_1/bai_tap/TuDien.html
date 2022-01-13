@@ -5,17 +5,16 @@
     <title>Title</title>
 </head>
 <body>
-<input type="text" id="nhap">
-<button type="button" onclick="timKiem">Tìm Kiếm</button>
-<p id="xuat"></p>
+<!--<input type="text" id="nhap">-->
+<!--<button type="button" onclick="timKiem()">Tìm Kiếm</button>-->
+<!--<p id="xuat"></p>-->
 <script>
-    function timKiem(){
-    document.getElementById()
-    }
-    let anh = ["hello", "googbye", "morning","afternoon","evening","good","bad"]
-    let viet = ["xin chào","tạm biệt","chào buổi sáng","chào buổi chiều","chào buổi tối","tốt","xấu"]
-    for (let i = 0; i <anh.length ; i++) {
-        if
+    let x = prompt("");
+    let anh = ["hello", "goodbye", "morning", "afternoon", "evening", "good", "bad"];
+    let viet = ["xin chào", "tạm biệt", "chào buổi sáng", "chào buổi chiều", "chào buổi tối", "tốt", "xấu"];
+    let i = anh.indexOf(x);
+    if (i > -1) {
+        document.write(viet[i]);
     }
 </script>
 </body>

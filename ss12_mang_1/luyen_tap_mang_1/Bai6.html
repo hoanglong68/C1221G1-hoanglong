@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n;
+    let flag;
+    do {
+        n = (prompt("nhập độ dài mảng"));
+        flag = (parseInt(n) == n) && n > 0;
+    } while (!flag);
+    n = parseInt(n);
+    let arr = new Array(n);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = parseInt(prompt("nhập phần tử thứ: " + i));
+    }
+    let v = parseInt(prompt("value V"));
+    let value = false
+    for (let i = 0; i < arr.length; i++) {
+        console.log(arr[i]);
+        if (v == arr[i]) {
+            value = true
+            break
+        }
+    }
+    if (value) {
+        alert("v is in the array");
+    } else alert("v isn't in the array");
+
+</script>
+</body>
+</html>

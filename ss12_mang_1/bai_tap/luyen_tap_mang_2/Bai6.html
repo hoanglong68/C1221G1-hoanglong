@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let cu = "-"
+    let moi = "_"
+    let n;
+    let flag;
+    do {
+        n = (prompt("nhập độ dài mảng"));
+
+        flag = (parseInt(n) == n) && n > 0;
+    } while (!flag);
+    n = parseInt(n);
+    let arr = new Array(n);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = (prompt("nhập phần tử thứ: " + i));
+    }
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] == cu) {
+            arr[i] = moi
+        }
+    }
+    document.write(arr)
+</script>
+</body>
+</html>
