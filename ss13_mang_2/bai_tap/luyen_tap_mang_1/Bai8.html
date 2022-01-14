@@ -8,12 +8,12 @@
 <script>
     let num = [];
     for (let i = 0; i < 10; i++) {
-        num.push(prompt("enter the string"));
+        num.push(parseInt(prompt("enter the string")));
         num.sort(function (x, y) {
             return (y - x);
         })
     }
-    document.write(num)
+    document.write(num);
 </script>
 </body>
 </html>

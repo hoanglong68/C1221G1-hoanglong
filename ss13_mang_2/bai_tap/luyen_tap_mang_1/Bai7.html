@@ -27,7 +27,7 @@
     //sau khi kết thúc vòng lặp
     //giá trị cuối cùng của mảng arr gán cho = 0
     //giảm i đi 1 đơn vị
-    let arr = [2, 5, 6, 7, 8, 3, 4, 12, 11, 14];
+    let arr = [2, 5, 6, 7, 8, 4, 4, 12, 11, 14];
     let v = parseInt(prompt("value V"));
     for (let i = 0; i < arr.length; i++) {
         if (v == arr[i]) {
@@ -35,7 +35,7 @@
                 arr[j] = arr[j + 1];
             }
             arr[arr.length - 1] = 0;
-            i++
+            i--
         }
     }
     alert("mảng sau khi xoá " + arr)

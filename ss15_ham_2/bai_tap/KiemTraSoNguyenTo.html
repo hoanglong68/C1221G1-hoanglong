@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isPrime(num) {
+        let count = 0;
+        if (num < 2) {
+            document.write(num + " không phải số nguyên tố");
+        } else {
+            for (let i = 2; i < 10000; i++) {
+                if (num % i == 0) {
+                    count++;
+                }
+            }
+        }
+        if (count > 1) {
+            document.write(num + " không phải số nguyên tố");
+        } else {
+            document.write(num + " số nguyên tố");
+        }
+    }
+
+    isPrime(8);
+</script>
+</body>
+</html>
