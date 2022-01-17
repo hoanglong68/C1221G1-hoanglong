@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let flag
+    function check(x) {
+        if (x % 1 == 0) {
+            flag = true;
+        }else {
+            flag = false;
+        }
+    }
+    let x = prompt("write something!");
+    check(x);
+    if (flag){
+        document.write("number");
+    }else {
+        document.write("string");
+    }
+</script>
+</body>
+</html>

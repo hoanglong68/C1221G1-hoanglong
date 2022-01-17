@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function dienTich(number) {
+        let result = 3.14 * Math.pow(number, 2);
+        return result
+    }
+
+    function chuVi(number) {
+        let result = 3.14 * 2 * number;
+        return result
+    }
+
+    let r = parseInt(prompt("nhập bán kính"));
+    let dienTichTron = dienTich(r);
+    let chuViTron = chuVi(r);
+    alert("diện tích hình tròn: " + dienTichTron + " chu vi hình tròn: " + chuViTron);
+</script>
+</body>
+</html>

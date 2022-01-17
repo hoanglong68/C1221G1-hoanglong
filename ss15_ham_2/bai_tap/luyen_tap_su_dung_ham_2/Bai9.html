@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let count = 0;
+
+    function check(array, symbol) {
+        for (let i = 0; i < array.length; i++) {
+            if (symbol == array[i]) {
+                count++;
+            }
+        }
+        if (count != 0) {
+            return count;
+        } else {
+            return -1;
+        }
+    }
+
+    let array = [1, 3, 4, 5, 6, 7, "n", "a", "b"];
+    let symbol = prompt("symbol");
+    let result = check(array,symbol);
+    if(result == -1){
+        document.write("ko tìm thấy");
+    }else {
+        document.write("số lần kí tự xuất hiện: " + count);
+    }
+
+
+</script>
+</body>
+</html>

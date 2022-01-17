@@ -5,6 +5,23 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    function fooToMeter(foot) {
+        let meter = foot * 0.305;
+        return meter;
+    }
 
+    function meterToFoot(meter) {
+        let foot = meter * 3.279;
+        return foot;
+    }
+
+    let theMeter = fooToMeter(parseInt(prompt("enter foot")));
+    document.write("meter is: " + theMeter);
+    document.write("<br>");
+    let theFoot = meterToFoot(parseInt(prompt("enter meter")));
+    document.write("foot is: " + theFoot);
+    document.write("<br>");
+</script>
 </body>
 </html>

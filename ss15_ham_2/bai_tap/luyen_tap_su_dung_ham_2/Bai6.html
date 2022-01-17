@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let flag
+
+    function check(number) {
+        if (number > 0) {
+            flag = true;
+        } else {
+            flag = false;
+        }
+    }
+let number= parseInt(prompt("number"));
+    let result = check(number);
+    if (flag) {
+        alert("số dương");
+    } else {
+        alert("số âm");
+    }
+</script>
+</body>
+</html>
