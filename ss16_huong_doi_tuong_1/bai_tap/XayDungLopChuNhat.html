@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="200" height="100"></canvas>
+<script>
+    class Rectangle {
+        constructor(dai, rong) {
+            this.dai = dai;
+            this.rong = rong;
+        }
+
+        getDienTich() {
+            return this.dai * this.rong;
+        }
+
+        getChuVi() {
+            return (this.dai + this.rong) * 2;
+        }
+
+        getDisplay() {
+            let c = document.getElementById("myCanvas");
+            let ctx = c.getContext("2d");
+            // nhân x10 các cạnh để hình chữ nhật đc to hơn
+            ctx.fillRect(0, 0, this.dai *10 , this.rong *10 );
+        }
+
+        setDai(dai) {
+            this.dai = dai;
+        }
+
+        setRong(rong) {
+            this.rong = rong;
+        }
+
+        getChuVi() {
+            return (this.rong + this.dai) * 2;
+        }
+
+        getDienTich() {
+            return this.rong * this.dai;
+        }
+    }
+
+    let chuNhat = new Rectangle(12, 8);
+    chuNhat.getDisplay();
+    document.write("<br>");
+    chuNhat.setDai(30);
+    chuNhat.setRong(15);
+    let chuVi = chuNhat.getChuVi();
+    let dienTich = chuNhat.getDienTich();
+    document.write("chu vi là: " + chuVi + " diện tích là: " + dienTich);
+</script>
+</body>
+</html>

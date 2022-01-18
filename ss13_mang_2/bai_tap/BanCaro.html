@@ -11,16 +11,74 @@
     let tablestr = "<table border='1' cellspacing='5' cellpadding='30'>"
     for (let i = 0; i < mang.length; i++) {
         tablestr += "<tr>";
-        for (let j = 0; j <mang.length ; j++) {
+        for (let j = 0; j < mang.length; j++) {
             tablestr += "<td>";
         }
-        tablestr +="</td>"
+        tablestr += "</td>"
     }
     tablestr += "</table>"
-document.getElementById("display").innerHTML = tablestr
+    document.getElementById("display").innerHTML = tablestr;
 
+    function danhDau(i, j) {
+        if (flag && !kiemTraDuLieu(i, j)) {
+            array[i][j] = "X";
+            flag = false;
+            if (kiemTraChienThang()) {
+                alert("người chơi 1 chiến thắng")
+            }
+        } else if (!flag && !kiemTraDuLieu(i, j)) {
+            array[i][j] = "O";
+            flag = true;
+            if (kiemTraChienThang()) {
+                alert("người chơi 2 chiến thắng")
+            }
+        }
+        hienThi();
+    }
 
+    function kiemTraDuLieu(i, j) {
+        if (array[i][j] !== "") {
+            alert("Ô nay đánh rồi bạn ơi");
+            return true;
+        } else {
+            return false;
+        }
+    }
 
+    function kiemTraChienThang() {
+        for (let i = 0; i < 10; i++) {
+            for (let j = 0; j < 10; j++) {
+                if (array[i][j] == "X") {
+                    if (array[i][j + 1] == "X" && array[i][j + 2] == "X") {
+                        return true;
+                    }
+                    if (array[i + 1][j] == "X" && array[i + 2][j] == "X") {
+                        return true;
+                    }
+                    if (array[i + 1][j - 1] == "X" && array[i + 2][j - 2] == "X") {
+                        return true;
+                    }
+                    if (array[i + 1][j + 1] == "X" && array[i + 2][j + 2] == "X") {
+                        return true;
+                    }
+                } else if (array[i][j] == "O") {
+                    if (array[i][j + 1] == "O" && array[i][j + 2] == "O") {
+                        return true;
+                    }
+                    if (array[i + 1][j] == "O" && array[i + 2][j] == "O") {
+                        return true;
+                    }
+                    if (array[i + 1][j - 1] == "O" && array[i + 2][j - 2] == "O") {
+                        return true;
+                    }
+                    if (array[i + 1][j + 1] == "O" && array[i + 2][j + 2] == "O") {
+                        return true;
+                    }
+                }
+
+            }
+        }
+    }
 
 
 </script>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    class MyDate {
+        constructor(day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+        }
+
+        setDay(day) {
+            this.day = day
+        }
+
+        getDay() {
+            return this.day;
+        }
+        setDate(day,month,year){
+            this.day = day;
+            this.month = month;
+            this.year = year;
+        }
+        //toString biểu diễn thông tin đối tượng
+        toString(){
+            return this.day + "/" + this.month + "/" + this.year
+        }
+    }
+
+    let date = new MyDate(2, 2, 2007);
+    date.setDate(20,1,1998);
+    console.log(date);
+</script>
+</body>
+</html>
