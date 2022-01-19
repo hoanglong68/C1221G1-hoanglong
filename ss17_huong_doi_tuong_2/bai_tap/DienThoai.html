@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class DienThoai {
+        constructor() {
+            this.pin = 100;
+            this.trangThai = true; // đang bật
+            this.vungSoanTin = "";
+            this.vungTinDaGui = [];
+            this.vungTinDaNhan = [];
+        }
+
+        getTrangThai() {
+            return this.trangThai;
+        }
+
+        batTat() {
+            if (this.trangThai) {
+                this.trangThai = false;
+            }
+        }
+
+        sacPin() {
+            if (this.pin < 10) {
+                this.pin = 100;
+            }
+        }
+        soanTinNhan(text){
+            this.vungSoanTin = text;
+        }
+        nhanTinNhan(text){
+            this.vungTinDaNhan.push(text);
+        }
+        guiTinNhan(dienThoai,text){
+            this.soanTinNhan(text);
+            this.vungTinDaGui.push(this.vungSoanTin);
+            this.vungSoanTin = "";
+            dienThoai.nhanTinNhan(this.vungTinDaGui);
+        }
+        hienThiHopThuDen(){
+            console.log(this.vungTinDaNhan);
+        }
+    }
+    let iphone = new DienThoai();
+    let nokia = new DienThoai();
+    iphone.guiTinNhan(nokia,"hello nokia");
+    nokia.hienThiHopThuDen();
+    nokia.guiTinNhan(iphone,"hi iphone");
+    iphone.hienThiHopThuDen();
+</script>
+</body>
+</html>
