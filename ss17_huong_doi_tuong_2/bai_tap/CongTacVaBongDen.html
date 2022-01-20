@@ -7,42 +7,41 @@
 <body>
 <script>
     class SwitchButton {
-        constructor(ElectricLamp) {
+        constructor() {
             this.status = false;
+
+        }
+
+        connectToLamp(ElectricLamp) {
             this.lamp = ElectricLamp;
         }
-
-        connectToLamp() {
-            if (this.status === true) {
-                alert("connect!");
-            } else {
-                alert("disconnect!");
-            }
-        }
-
+//không được truy cập đối tượng ngược lại vào trong class
         getSwitchOff() {
             this.status = false;
-            return lamp.turnOff();
+            this.lamp.turnOff();
         }
 
         getSwitchOn() {
             this.status = true;
-            return lamp.turnOn();
+            this.lamp.turnOn();
+
         }
     }
 
     //////////////////////////////////////////
     class EletricLamp {
-        constructor(button) {
-            this.status = button;
+        constructor() {
+            this.status = false;
         }
 
         turnOff() {
+            this.status = !this.status;
             alert("not lighting");
 
         }
 
         turnOn() {
+            this.status = !this.status;
             alert("lighting");
 
         }
@@ -50,9 +49,81 @@
 
     let lamp = new EletricLamp();
     let button = new SwitchButton();
-    button.connectToLamp();
+    button.connectToLamp(lamp);
+    console.log(lamp.status);
+    button.getSwitchOn();
+    console.log(lamp.status);
     button.getSwitchOff();
-
+    console.log(lamp.status);
+   //  class ElectricLamp {
+   //      constructor() {
+   //          this.status = congTac.connectToLamp();
+   //      }
+   //
+   //      getStatus() {
+   //          return this.status;
+   //      }
+   //
+   //      turnOff() {
+   //          if (congTac.switchOff() == true) {
+   //              return true;
+   //          } else {
+   //              return false;
+   //          }
+   //      }
+   //
+   //      turnOn() {
+   //          if (congTac.switchOn() == true) {
+   //              return true;
+   //          } else {
+   //              return false;
+   //          }
+   //      }
+   //  }
+   //
+   //
+   //  class SwitchButton {
+   //      constructor(status, lamp) {
+   //          this.status = status;
+   //          this.lamp = lamp;
+   //      }
+   //
+   //      getStatus() {
+   //          return this.status;
+   //      }
+   //
+   //      getLamp() {
+   //          return this.lamp;
+   //      }
+   //
+   //      connectToLamp() {
+   //          if (this.getStatus() == true) {
+   //              return true;
+   //          } else {
+   //              return false;
+   //          }
+   //      }
+   //
+   //      switchOff() {
+   //          if (this.getStatus() == false) {
+   //              return true;
+   //          } else {
+   //              return false;
+   //          }
+   //      }
+   //
+   //      switchOn() {
+   //          if (this.getStatus() == true) {
+   //              return true;
+   //          } else {
+   //              return false;
+   //          }
+   //      }
+   //  }
+   //
+   //  let congTac = new SwitchButton(false);
+   //  let bongDen = new ElectricLamp();
+   // console.log(congTac.connectToLamp())
 </script>
 </body>
 </html>

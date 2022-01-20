@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1" style="border-collapse: collapse">
+    <tr>
+        <th>STT</th>
+        <th>Biển số</th>
+        <th>Chủ sở hửu</th>
+        <th>Dung tích xi lanh</th>
+        <th>Edit</th>
+        <th>Xoá</th>
+    </tr>
+    <tr>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th>5</th>
+    </tr>
+</table>
+<script>
+    class XeMay {
+        constructor(bienKS, chuSoHuu, dungTichXL) {
+            this.bienSo = bienKS;
+            this.chuSoHuu = chuSoHuu;
+            this.dungTichXL = dungTichXL;
+        }
+
+        getBienSo() {
+            return this.bienSo;
+        }
+
+        setBienSo(bienSo) {
+            return this.bienSo = bienSo;
+        }
+
+        setChuSoHuu(chuSoHuu) {
+            this.chuSoHuu = chuSoHuu;
+        }
+
+        getChuSoHuu() {
+           return this.chuSoHuu;
+        }
+        setDungTichXL(dungTichXL){
+            this.dungTichXL = dungTichXL;
+        }
+        getDungTichXL(){
+            return this.dungTichXL;
+        }
+        toString(){
+            return "biển số: " + this.bienSo + "chủ sở hữu" + this.chuSoHuu +
+        }
+    }
+    let xe1=
+        let xe2=
+        let xe3=
+        let danhSach = [xe1,xe2,xe3];
+    function hienThi() {
+
+    }
+</script>
+</body>
+</html>

@@ -8,27 +8,27 @@
 <script>
     class Apple {
         constructor() {
-            this.apple = 10;
+            this.weight = 10;
         }
 
         decreaseApple() {
-            if (this.apple <= 10) {
-                this.apple--
+                this.weight--
+        }
+
+        isEmpty(tao) {
+            if (this.weight == 0) {
+                return true;
+            } else {
+                return false;
             }
         }
 
-        isEmpty() {
-            if (this.apple = 0) {
-                alert("hết táo");
-            }
-
-        }
-
-        getApple() {
-            return this.apple;
+        getWeight() {
+            return this.weight;
         }
     }
-/////////////////////////////////////////////
+
+    /////////////////////////////////////////////
     class Human {
         constructor(name, gender, weight) {
             this.name = name;
@@ -38,23 +38,24 @@
 
         isMale() {
             if (this.gender === "Male") {
-                alert("Male");
-            } else (this.gender === "Female")
-            {
-                alert("Female");
+                return true
+            } else {
+                return false
             }
         }
 
-        setGender(gender) {
-            return this.gender = gender;
+        checkApple(tao) {
+            if (tao.isEmpty()) {
+                this.say("táo hết");
+                return false;
+            } else {
+                this.say("táo còn");
+                return true;
+            }
         }
 
-        checkApple() {
-            return tao.getApple();
-        }
-
-        say() {
-            alert("táo");
+        say(text) {
+            console.log(this.name + ":" + text)
         }
 
         getName() {
@@ -73,8 +74,8 @@
             return this.weight = weight;
         }
 
-        eatApple() {
-            if (tao.getApple() >= 10) {
+        eatApple(tao) {
+            if (this.checkApple(tao)) {
                 this.weight++;
                 tao.decreaseApple();
             }
@@ -85,9 +86,7 @@
     let tao = new Apple();
     let adam = new Human("Adam", "Male", 65);
     let eva = new Human("Eva", "Female", 50);
-    adam.eatApple();
-    alert(tao.getApple());
-    alert(adam.checkApple());
+    adam.eatApple(tao);
 </script>
 </body>
 </html>

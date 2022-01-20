@@ -49,6 +49,8 @@
 
         turnOn() {
             this.status = true;
+            battery.decreaseEnergy();
+            flashLamp.light()
         }
 
         turnOff() {
@@ -59,15 +61,10 @@
     let battery = new Battery(10);
     let flashLamp = new FlashLamp(battery);
     flashLamp.turnOn();
-    flashLamp.light();
-battery.decreaseEnergy();
-document.write(flashLamp.getBatteryInfo());
-flashLamp.turnOff();
-flashLamp.light();
+    alert(flashLamp.getBatteryInfo());
+    flashLamp.turnOff();
     flashLamp.turnOn();
-    flashLamp.light();
-    battery.decreaseEnergy();
-    document.write(flashLamp.getBatteryInfo());
+    alert(flashLamp.getBatteryInfo());
 </script>
 </body>
 </html>
