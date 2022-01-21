@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let tuSo = [5, 2, 5, 5, 1, 3, 8, 8];
+    let mauSo = [6, 3, 1, 7, 4, 8, 2, 1];
+    let tuSoi = tuSo[0];
+    let mauSoi = mauSo[0];
+    let max = tuSoi /mauSoi ;
+    let index = 0;
+    for (let i = 0; i <mauSo.length ; i++) {
+       if(tuSo[i] / mauSo[i] > max){
+           tuSoi = tuSo[i];
+           mauSoi = mauSo[i];
+           max = tuSoi / mauSoi;
+           index = i;
+       }
+    }
+    // document.write(max);
+    document.write("phân số lớn nhất: "+ tuSoi + "/" + mauSoi + " có chỉ số là: "+ index);
+</script>
+</body>
+</html>

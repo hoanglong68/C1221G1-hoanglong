@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = prompt("enter");
+    let input = n.split("");
+    console.log(input);
+    let num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    let str = ["không", "một", "hai", "ba", "bốn", "năm", "sáu", "bảy", "tám", "chín"];
+    let dis = "";
+    for (let i = 0; i < num.length; i++) {
+        for (let j = 0; j < input.length; j++) {
+            if (input[j] == num[i]) {
+                dis = dis + str[i] + " ";
+            }
+        }
+    }
+    document.write(dis);
+</script>
+</body>
+</html>

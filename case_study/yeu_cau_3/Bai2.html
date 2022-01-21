@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrA = [7, 2, 5, 3, 5, 3];
+    let arrB = [7, 2, 5, 4, 6, 3, 5, 3];
+    let arr = [];
+    for (let i = 0; i < arrB.length; i++) {
+        for (let j = 0; j < arrA.length; j++) {
+            if (arrB[i] == arrA[j]) {
+                arrB[i] = "."
+                // xét duyệt mảng từng phần tử mảng A với từng phần tử mảng B
+                // nếu phần tử B == A thì gán nó thành .
+                // sau khi vòng lặp kết thúc thì còn lại phần tử ko phải là .
+                //chính là phần tử ko có trong mảng A
+            }
+        }
+    }
+    for (let i = 0; i < arrB.length; i++) {
+        if (arrB[i] != ".") {
+            arr.push(arrB[i]);
+        }
+    }
+    document.write(arr);
+</script>
+</body>
+</html>

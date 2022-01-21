@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="luong" placeholder="đơn vị : triệu">
+<button type="button" onclick="tinhToan()">Tính</button>
+<p id="display"></p>
+<script>
+    let luong;
+    let thue;
+    let luongThat;
+
+    function tinhToan() {
+        luong = document.getElementById("luong").value;
+        if (luong >= 15) {
+            thue = luong * 0.2;
+            luongThat = luong - thue;
+            document.getElementById("display").innerHTML = ("thuế thu nhập: " + thue + "<br>" + "thu nhập ròng: " + luongThat);
+        } else if (luong > 7) {
+            thue = luong * 0.1;
+            luongThat = luong - thue;
+            document.getElementById("display").innerHTML = ("thuế thu nhập: " + thue + "<br>" + "thu nhập ròng: " + luongThat);
+        }else {
+            thue = luong * 0.05;
+            luongThat = luong - thue;
+            document.getElementById("display").innerHTML = ("thuế thu nhập: " + thue + "<br>" + "thu nhập ròng: " + luongThat);
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    for (let i = 0; i < 15; i++) {
+        for (let j = 0; j <= i; j++) {
+            if (i == j || j == 0 || i == 14) {
+                // đường chéo : i bằng j ngay tại thời điểm đường chéo của hình vuông
+                //đường dọc : khi vòng lặp trong chạy j == 0 thì vẽ ngược lại thì bỏ
+                //đường ngang: khi vòng lặp chạy i != 14 thì bỏ, ngược lại thì vẽ full
+                document.write("*");
+            } else {
+                document.write("&nbsp&nbsp");
+            }
+        }
+        document.write("<br>");
+    }
+</script>
+</body>
+</html>
