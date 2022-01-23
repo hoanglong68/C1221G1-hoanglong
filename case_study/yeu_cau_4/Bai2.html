@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // accumulator(congDon) là biến tích luỹ được cộng dồn mỗi khi function thực
+    //hiện. sau khi tất cả phần tử trong mảng được xử lí congDon là kết quả cuối
+    //cùng được trả về từ array.reduce
+    //elements(phanTu) là phần tử trong mảng được xử lý mỗi khi function được gọi
+    let str = "cabacczataxeab";
+    let newstr = str.split("");
+    //viết hàm reduce. khởi tạo accmulator là congDon, elements là phanTu, biến ban đầu
+    // của congDon sẽ là mảng []. khi function được gọi: xét nếu các phần tử trong mảng
+    // cụ thể là phanTu không có trong mảng biến congDon ( ko có sẽ trả về giá trị -1)
+    //thì đẩy phanTu vào trong mảng congDon. Ngược lại nếu có thì ko làm gì cả.
+    //tiếp tục xét các phần tử lần lượt trong mảng (hàm reduce sẽ thực hiện điều này)
+    //giá trị trả về là congDon ( là mảng chứa các phần tử có mặt trong newstr)
+    let arr = newstr.reduce(function (congDon, phanTu) {
+        if (congDon.indexOf(phanTu) == -1) {
+            congDon.push(phanTu);
+        }
+        return congDon;
+    }, [])
+    //[] là giá trị ban đầu của biến tích luỹ accumulator. chúng ta truyền vào.
+    //nếu ko truyền gì cả thì giá trị mặc định là phần tử đầu tiên trong mảng
+    document.write(arr + " <br>" + " số kí tự khác nhau: " + arr.length);
+
+</script>
+</body>
+</html>

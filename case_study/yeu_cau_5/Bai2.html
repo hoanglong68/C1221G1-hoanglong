@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let snt = [];
+    let arr = [
+        [1, 4, 3, 4],
+        [2, 3, 6, 8],
+        [13, 17, 2, 7],
+        [9, 97, 23, 11]
+    ];
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+            let count = 0;
+            if (arr[i][j] <= 1) {
+                continue
+            } else {
+                for (let k = 2; k <= arr[i][j]; k++) {
+                    if (arr[i][j] % k == 0) {
+                        count++
+                    }
+
+
+                }
+
+            }
+            if (count < 2) {
+                snt.push(arr[i][j]);
+            }
+        }
+    }
+    document.write(snt)
+</script>
+</body>
+</html>

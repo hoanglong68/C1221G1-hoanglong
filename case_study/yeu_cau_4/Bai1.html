@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = "tRuong      TaN   HAI"
+    let arr;
+    let trans = [];
+    let newstr = [];
+    let newstr2 = [];
+    let result;
+    // chuyển chuỗi thành các chuỗi nhỏ trong mảng, duyệt mảng và xét if arr[i] khác
+    //khoảng cách thì đưa vào mảng trans
+    //duyệt mảng trans thực hiện lowcase tất cả phần tử trong mảng
+    //đẩy tất cả sang mảng newstr. sau đó thực hiện lấy kí tự đầu của phần tử mảng newstr
+    //upcase kí tự đó rồi + với chuỗi newstr đã xoá kí tự đầu tiên của chuỗi bằng slice
+    //đẩy các phần tử mảng newstr đã xử lý vào mảng newstr2
+    //thực hiện hàm join trên newstr2 ( nối các phần tử trong mảng thành 1 chuỗi cách nhau
+    //bởi khoảng trống, sau đó gán cho biến result và hiển thị result
+    function transfer(str) {
+        arr = str.split(" ");
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] != "") {
+                trans.push(arr[i]);
+            }
+        }
+        console.log(trans);
+        for (let i = 0; i < trans.length; i++) {
+            newstr.push(trans[i].toLowerCase());
+            newstr2.push(newstr[i].charAt(0).toUpperCase() + newstr[i].slice(1));
+        }
+        result = newstr2.join(" ");
+document.write(result + "<br>");
+    }
+    // transfer(str)
+    let strLongest =0 ;
+    function longest() {
+
+
+        transfer(str);
+        for (let i = 0; i < newstr2.length; i++) {
+            if(newstr2[i].length > strLongest){
+                strLongest = newstr2[i];
+            }
+        }
+        document.write("kí tự dài nhất: " + strLongest);
+    }
+    longest(str);
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str1 = "aabdcceczxc";
+    let str2 = "zxcadcaeadz";
+    let arr1 = str1.split("").sort();
+    let arr2 = str2.split("").sort();
+    let result = [];
+    for (let i = 0; i < arr1.length; i++) {
+        for (let j = 0; j < arr2.length; j++) {
+            if (arr2[j] == arr1[i]) {
+                result.push(arr1[i]);
+                arr1[i] = "."
+                arr2[j] = ","
+                console.log(arr1);
+//nếu phần tử mảng 2 giống mảng 1, đẩy phần tử mảng 1 vào result
+//gán . cho phần tử đã xét ở mảng 1 tránh xét lặp lại
+//gán , cho phần tử đã xét ở mảng 2 tránh xét lặp lại
+            }
+        }
+    }
+    document.write(result +"<br>"+ "2 chuỗi có số kí tự giống nhau: " + result.length);
+</script>
+</body>
+</html>
