@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class VeSo {
+        constructor(veSo) {
+            this.veSo = veSo
+        }
+
+        tuNhapSo() {
+            for (let i = 1; i <= 6; i++) {
+                this.so = parseInt(prompt("nhập số"));
+                this.veSo.push(this.so)
+            }
+        }
+
+        randomSo() {
+            for (let i = 1; i <= 6; i++) {
+                let so = Math.floor(Math.random() * 100);
+                this.veSo = this.veSo.push(so);
+            }
+
+        }
+
+        muaVe(select) {
+            select = prompt("chọn cách thức quay số")
+            if (select == "chon") {
+                this.tuNhapSo();
+                return this.veSo;
+            } else if (select == "random") {
+                this.randomSo();
+                return this.veSo;
+            }
+        }
+
+        quaySo() {
+            let count = 0
+            for (let i = 1; i <= 6; i++) {
+                let ketQuaSo = Math.floor(Math.random() * 100);
+                ketQua = ketQua.push(ketQuaSo);
+            }
+            for (let i = 6; i >= 3; i--) {
+                if (this.veSo[i] == ketQua[i]) {
+                    count++
+                } else {
+                    alert("chúc may mắn lần sau!");
+                    break
+                }
+            }
+            for (let i = 3; i >=1 ; i--) {
+                if ()
+            }
+        }
+    }
+
+</script>
+</body>
+</html>
