@@ -7,56 +7,91 @@
 <body>
 <script>
     class VeSo {
-        constructor(veSo) {
-            this.veSo = veSo
+        constructor() {
+            this.veSo = [];
         }
 
         tuNhapSo() {
             for (let i = 1; i <= 6; i++) {
-                this.so = parseInt(prompt("nhập số"));
-                this.veSo.push(this.so)
+                let so = parseInt(prompt("nhập số thứ " + i));
+                this.veSo.push(so);
             }
         }
-
         randomSo() {
             for (let i = 1; i <= 6; i++) {
                 let so = Math.floor(Math.random() * 100);
-                this.veSo = this.veSo.push(so);
-            }
-
-        }
-
-        muaVe(select) {
-            select = prompt("chọn cách thức quay số")
-            if (select == "chon") {
-                this.tuNhapSo();
-                return this.veSo;
-            } else if (select == "random") {
-                this.randomSo();
-                return this.veSo;
+                this.veSo.push(so);
             }
         }
+        getVeSo() {
+            return this.veSo;
+        }
 
-        quaySo() {
-            let count = 0
+        // xoSo() {
+        //     let arr = [];
+        //     let ketQua;
+        //     for (let i = 1; i <= 6; i++) {
+        //         let so = Math.floor(Math.random() * 100);
+        //         ketQua = arr.push(so);
+        //     }
+        //     return ketQua;
+        // }
+    }
+
+    ////////////////////////////////////////////////////
+    class NguoiChoi {
+        constructor(veSo) {
+            this.veSo = null;
+        }
+
+        muaVe(veSo) {
+            let select = prompt("chọn cách thức quay số\n 1.chọn\n 2.random");
+            if (select == 1) {
+                veSo.tuNhapSo();
+            } else if (select == 2) {
+                veSo.randomSo();
+            }
+        }
+
+        quaySo(veSo) {
+            let count = 0;
+            // let ketQua = [1,2,3,4,5,6];
+            let ketQua = [];
             for (let i = 1; i <= 6; i++) {
-                let ketQuaSo = Math.floor(Math.random() * 100);
-                ketQua = ketQua.push(ketQuaSo);
+                let so = Math.floor(Math.random() * 100);
+                ketQua.push(so);
             }
-            for (let i = 6; i >= 3; i--) {
-                if (this.veSo[i] == ketQua[i]) {
-                    count++
-                } else {
-                    alert("chúc may mắn lần sau!");
-                    break
+            alert("vé của bạn là: " + veSo.getVeSo());
+            alert("kết quả chương trình: "+ ketQua);
+            for (let i = 5; i >= 0; i--) {
+                if (veSo.getVeSo()[i] == ketQua[i]) {
+                    count++;
+                    console.log(count);
                 }
             }
-            for (let i = 3; i >=1 ; i--) {
-                if ()
+            if (count >= 3) {
+                if (veSo.getVeSo()[3] == ketQua[3]) {
+                    if (veSo.getVeSo()[2] == ketQua[2]) {
+                        if (veSo.getVeSo()[1] == ketQua[1]) {
+                            alert("giải nhất");
+                        } else {
+                            alert("giải nhì");
+                        }
+                    } else {
+                        alert("giải khuyến khích");
+                    }
+                } else {
+                    alert("giải khuyến khích");
+                }
+            } else {
+                alert("chúc may mắn lần sau!");
             }
         }
     }
-
+    let veSo = new VeSo();
+    let nguoi = new NguoiChoi();
+    nguoi.muaVe(veSo);
+    nguoi.quaySo(veSo);
 </script>
 </body>
 </html>

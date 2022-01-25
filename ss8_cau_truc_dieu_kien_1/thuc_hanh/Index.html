@@ -6,21 +6,22 @@
 </head>
 <body>
 <script>
-    let year = parseInt(prompt("Enter the year"))
-    if (year % 4 == 0) {
-        if (year % 100 == 0) {
-            if (year % 400 == 0) {
-                alert(year + " is a leap year");
-            } else {
-                alert(year + " is a Not leap year");
+    //Năm nhuận là năm chia hết cho 400
+    //Năm nhuận là năm chia hết cho 4 nhưng không chia hết cho 100
+        let year = parseInt(prompt("Enter the year"))
+        if (year % 4 == 0) {
+            if (year % 100 == 0) {
+                if (year % 400 == 0) {
+                    alert(year + " is a leap year");
+                } else {
+                    alert(year + " is a Not leap year");
+                }
+            }else{
+                    alert(year + " is a leap year");
             }
-        }else{
-                alert(year + " is a leap year");
+            }else {
+            alert(year + " is NOT a leap year");
         }
-        }else {
-        alert(year + " is NOT a leap year");
-    }
-
 
 </script>
 </body>
