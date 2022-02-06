@@ -6,24 +6,24 @@
 </head>
 <body>
 <script>
-    let n = 30
-    let count = 0
-    let total = 0
-    let i = 1
-    for(i =1;;i++){
+    let n = 30;
+    let count = 0;
+    let total = 0;
+    let i = 1;
+    for (i = 1; ; i++) {
         // ô điều kiện vòng lặp để trống để tạo vòng lặp vô tận
-        if (i %7 == 0){
-            document.write(i+" ")
-            let n1 = i
+        if (i % 7 == 0) {
+            document.write(i + " ");
+            let n1 = i;
             // gán i là n1 để khi chạy vòng lặp số đầu tiên thoả đk if sẽ là số n1 để cộng dồn vào total
-            count++
-            total += n1
-        }else if (count>n){
-            break
+            count++;
+            total += n1;
+        } else if (count > n) {
+            break;
             // set điều kiện if để thoát vòng lặp vô tận khi đủ 30 số
         }
     }
-    document.write("tổng"+ total)
+    document.write("tổng" + total);
 </script>
 </body>
 </html>

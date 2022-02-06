@@ -9,6 +9,7 @@
     class VeSo {
         constructor() {
             this.veSo = [];
+            this.ketQua = [];
         }
 
         tuNhapSo() {
@@ -17,14 +18,27 @@
                 this.veSo.push(so);
             }
         }
+
         randomSo() {
             for (let i = 1; i <= 6; i++) {
-                let so = Math.floor(Math.random() * 100);
+                let so = Math.floor(Math.random() * 100 - 1);
                 this.veSo.push(so);
             }
         }
+
         getVeSo() {
             return this.veSo;
+        }
+
+        ketQuaSo() {
+            for (let i = 1; i <= 6; i++) {
+                let so = Math.floor(Math.random() * 100 - 1);
+                this.ketQua.push(so);
+            }
+        }
+
+        getKetQua() {
+            return this.ketQua;
         }
 
         // xoSo() {
@@ -55,24 +69,19 @@
 
         quaySo(veSo) {
             let count = 0;
-            // let ketQua = [1,2,3,4,5,6];
-            let ketQua = [];
-            for (let i = 1; i <= 6; i++) {
-                let so = Math.floor(Math.random() * 100);
-                ketQua.push(so);
-            }
+            veSo.ketQuaSo();
             alert("vé của bạn là: " + veSo.getVeSo());
-            alert("kết quả chương trình: "+ ketQua);
+            alert("kết quả chương trình: " + veSo.getKetQua());
             for (let i = 5; i >= 0; i--) {
-                if (veSo.getVeSo()[i] == ketQua[i]) {
+                if (veSo.getVeSo()[i] == veSo.getKetQua()[i]) {
                     count++;
                     console.log(count);
                 }
             }
             if (count >= 3) {
-                if (veSo.getVeSo()[3] == ketQua[3]) {
-                    if (veSo.getVeSo()[2] == ketQua[2]) {
-                        if (veSo.getVeSo()[1] == ketQua[1]) {
+                if (veSo.getVeSo()[3] == veSo.getKetQua()[3]) {
+                    if (veSo.getVeSo()[1] == veSo.getKetQua()[1]) {
+                        if (veSo.getVeSo()[0] == veSo.getKetQua()[0]) {
                             alert("giải nhất");
                         } else {
                             alert("giải nhì");
@@ -88,6 +97,7 @@
             }
         }
     }
+
     let veSo = new VeSo();
     let nguoi = new NguoiChoi();
     nguoi.muaVe(veSo);

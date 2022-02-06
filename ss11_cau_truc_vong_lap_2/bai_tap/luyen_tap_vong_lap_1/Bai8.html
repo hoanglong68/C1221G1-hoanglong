@@ -8,29 +8,29 @@
 <button type="button" onclick="choi()">Chơi!</button>
 <script>
     function choi() {
-        let max = prompt("nhập khoảng số")
+        let max = prompt("nhập khoảng số");
         let random = Math.ceil(max * Math.random());
         // ceil 7.1 =>8; ground 7.8 => 7
-        alert(random)
-        let yourNum = parseInt(prompt("nhập số dự đoán"))
-        let count = 1
-        for (let i = 1;; i++) {
-            count++
+        alert(random);
+        let yourNum = parseInt(prompt("nhập số dự đoán"));
+        let count = 1;
+        for (let i = 1; ; i++) {
+            count++;
             if (yourNum == random) {
-                alert("bạn đã thắng!")
-                break
+                alert("bạn đã thắng!");
+                break;
             } else if (yourNum < random) {
-                alert("bạn đã dự đoán thấp hơn")
-                yourNum = parseInt(prompt("dự đoán lại"))
+                alert("bạn đã dự đoán thấp hơn");
+                yourNum = parseInt(prompt("dự đoán lại"));
             } else if (yourNum > random) {
-                alert("bạn đã dự đoán cao hơn")
-                yourNum = parseInt(prompt("dự đoán lại"))
+                alert("bạn đã dự đoán cao hơn");
+                yourNum = parseInt(prompt("dự đoán lại"));
 
             }
-         if (count == 3 ) {
-             alert("bạn đã thua")
-             break
-         }
+            if (count == 3) {
+                alert("bạn đã thua");
+                break;
+            }
         }
     }
 </script>

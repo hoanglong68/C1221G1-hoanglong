@@ -6,19 +6,21 @@
 </head>
 <body>
 <script>
-    let flag
+    let flag;
+
     function check(x) {
         if (x % 1 == 0) {
             flag = true;
-        }else {
+        } else {
             flag = false;
         }
     }
+
     let x = prompt("write something!");
     check(x);
-    if (flag){
+    if (flag) {
         document.write("number");
-    }else {
+    } else {
         document.write("string");
     }
 </script>

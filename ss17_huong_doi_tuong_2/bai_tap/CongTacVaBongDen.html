@@ -15,6 +15,7 @@
         connectToLamp(ElectricLamp) {
             this.lamp = ElectricLamp;
         }
+
 //không được truy cập đối tượng ngược lại vào trong class
         getSwitchOff() {
             this.status = false;
@@ -55,75 +56,6 @@
     console.log(lamp.status);
     button.getSwitchOff();
     console.log(lamp.status);
-   //  class ElectricLamp {
-   //      constructor() {
-   //          this.status = congTac.connectToLamp();
-   //      }
-   //
-   //      getStatus() {
-   //          return this.status;
-   //      }
-   //
-   //      turnOff() {
-   //          if (congTac.switchOff() == true) {
-   //              return true;
-   //          } else {
-   //              return false;
-   //          }
-   //      }
-   //
-   //      turnOn() {
-   //          if (congTac.switchOn() == true) {
-   //              return true;
-   //          } else {
-   //              return false;
-   //          }
-   //      }
-   //  }
-   //
-   //
-   //  class SwitchButton {
-   //      constructor(status, lamp) {
-   //          this.status = status;
-   //          this.lamp = lamp;
-   //      }
-   //
-   //      getStatus() {
-   //          return this.status;
-   //      }
-   //
-   //      getLamp() {
-   //          return this.lamp;
-   //      }
-   //
-   //      connectToLamp() {
-   //          if (this.getStatus() == true) {
-   //              return true;
-   //          } else {
-   //              return false;
-   //          }
-   //      }
-   //
-   //      switchOff() {
-   //          if (this.getStatus() == false) {
-   //              return true;
-   //          } else {
-   //              return false;
-   //          }
-   //      }
-   //
-   //      switchOn() {
-   //          if (this.getStatus() == true) {
-   //              return true;
-   //          } else {
-   //              return false;
-   //          }
-   //      }
-   //  }
-   //
-   //  let congTac = new SwitchButton(false);
-   //  let bongDen = new ElectricLamp();
-   // console.log(congTac.connectToLamp())
 </script>
 </body>
 </html>

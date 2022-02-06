@@ -6,7 +6,7 @@
 </head>
 <body>
 <script>
-    let flag = false
+    let flag = false;
     let str1 = prompt("enter string1");
     let str2 = prompt("enter string2");
     let arrStr1 = str1.split("");
@@ -14,16 +14,16 @@
     console.log(arrStr1);
     console.log(arrStr2);
     if (arrStr1.length == arrStr2.length) {
-        flag = true
+        flag = true;
     }
     for (let i = 0; i < arrStr1.length; i++) {
         if (arrStr1[i] === arrStr2[i]) {
-            flag = true
+            flag = true;
         }
     }
     if (flag) {
-        alert("same")
-    }else alert("not same")
+        alert("same");
+    } else alert("not same");
 
 </script>
 </body>

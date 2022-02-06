@@ -6,20 +6,21 @@
 </head>
 <body>
 <script>
-    function check(a,b,c) {
+    function check(a, b, c) {
         // let soNhoNhat = (a < b) ? (a < c) ? alert("a bé nhất") : (b < c) ? alert("b bé nhất") : alert("c bé nhất");
-        if (a<b && a<c){
+        if (a < b && a < c) {
             alert("a nhỏ nhất");
-        }else if (b<c){
+        } else if (b < c) {
             alert("b nhỏ nhất");
-        }else {
+        } else {
             alert("c nhỏ nhất");
         }
     }
+
     let a = parseInt(prompt("a"));
     let b = parseInt(prompt("b"));
     let c = parseInt(prompt("c"));
-    let result = check(a,b,c);
+    let result = check(a, b, c);
 </script>
 </body>
 </html>

@@ -6,17 +6,15 @@
 </head>
 <body>
 <script>
-    function daoSo(a,b ) {
-        let mang = [];
-        mang.push(a);
-        mang.push(b);
+    function daoMang(mang) {
         mang.reverse();
         return mang;
     }
-    let a = parseInt(prompt("a"));
-    let b = parseInt(prompt("b"));
-    let result = daoSo(a, b);
+
+    let array = [1, 5, 6, 5, 8, 2, 5, 7];
+    let result = daoMang(array);
     document.write(result);
+
 </script>
 </body>
 </html>

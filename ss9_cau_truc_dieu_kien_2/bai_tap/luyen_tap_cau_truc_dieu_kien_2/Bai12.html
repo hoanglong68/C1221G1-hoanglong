@@ -8,11 +8,12 @@
 <script>
     let thang = parseInt(prompt("số tháng vay"));
     let tien = parseInt(prompt("số tiền vay"));
-    let tienLai = 0
+    let tienLai = 0;
     let laiSuat = 0.01;
-    for (i=0;i<thang;i++){
-        tienLai = (tien*laiSuat)*thang + tienLai
-    }document.write("tiền lãi là"+tienLai)
+    for ( let i = 0; i < thang; i++) {
+        tienLai = (tien * laiSuat) * thang + tienLai;
+    }
+    document.write("tiền lãi là" + tienLai);
 </script>
 </body>
 </html>
