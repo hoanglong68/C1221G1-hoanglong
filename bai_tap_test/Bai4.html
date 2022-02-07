@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class AccountBank {
+        constructor(code, nameAccount, nameBank, money) {
+            this.code = code;
+            this.nameAccount = nameAccount;
+            this.nameBank = nameBank;
+            this.money = money;
+        }
+
+        getCode() {
+            return this.code;
+        }
+
+        getNameAccount() {
+            return this.nameAccount;
+        }
+
+        getNameBank() {
+            return this.nameBank;
+        }
+
+        getMoney() {
+            return this.money;
+        }
+
+        setCode(code) {
+            this.code = code;
+        }
+
+        setNameAccount(nameAccount) {
+            this.nameAccount = nameAccount;
+        }
+
+        setNameBank(nameBank) {
+            this.nameBank = nameBank;
+        }
+
+        setMoney(money) {
+            this.money = money;
+        }
+
+        toString(account) {
+            document.write("mã: " + account.getCode());
+            document.write("<br>");
+            document.write("tên tài khoản: " + account.getNameAccount());
+            document.write("<br>");
+            document.write("tên ngân hàng: " + account.getNameBank());
+            document.write("<br>");
+            document.write("số tiền trong tài khoản: " + account.getMoney());
+        }
+    }
+
+    let account = new AccountBank("tcb2", "Long", "Techcombank", 20000);
+    account.toString(account);
+</script>
+</body>
+</html>

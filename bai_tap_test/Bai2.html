@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function str(str) {
+        let arr = str.split(" ");
+        let newarr = [];
+        if (arr.length > 1) {
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] != "") {
+                    newarr.push(arr[i]);
+                }
+            }
+            let result = "";
+            for (let i = 0; i < newarr.length; i++) {
+                result = result + newarr[i].charAt(0).toUpperCase();
+            }
+            document.write(result);
+        } else document.write("Chuỗi chỉ có 1 từ nên không cần viết tắc");
+    }
+
+    str(prompt("enter string"));
+</script>
+</body>
+</html>

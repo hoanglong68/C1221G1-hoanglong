@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function findArrayInFibonaci() {
+        let fiboArr = [];
+        let nextNum;
+        let so1 = 0;
+        let so2 = 1;
+        let newarr = [];
+        for (let i = 1; i <= 20; i++) {
+            fiboArr.push(so1);
+            nextNum = so1 + so2;
+            so1 = so2;
+            so2 = nextNum;
+        }
+        document.write(fiboArr);
+        document.write("<br>");
+        for (let i = 0; i < fiboArr.length; i++) {
+            for (let j = 0; j < arr.length; j++) {
+                if (arr[j] == fiboArr[i]) {
+                    newarr.push(arr[j]);
+                }
+            }
+        }
+        let result = newarr.sort(function (x, y) {
+            return x - y;
+        });
+        document.write(result);
+    }
+
+    let arr = [1, 5, 6, 13, 9, 12, 8, 0, 5, 1, 13];
+    findArrayInFibonaci(arr);
+</script>
+</body>
+</html>
