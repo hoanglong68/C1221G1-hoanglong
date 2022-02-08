@@ -18,7 +18,7 @@
             so1 = so2;
             so2 = nextNum;
         }
-        document.write(fiboArr);
+        document.write("dãy fibonaci: " + fiboArr);
         document.write("<br>");
         for (let i = 0; i < fiboArr.length; i++) {
             for (let j = 0; j < arr.length; j++) {
@@ -30,11 +30,12 @@
         let result = newarr.sort(function (x, y) {
             return x - y;
         });
-        document.write(result);
+        return result;
     }
 
     let arr = [1, 5, 6, 13, 9, 12, 8, 0, 5, 1, 13];
-    findArrayInFibonaci(arr);
+    let ketQua = findArrayInFibonaci(arr);
+    document.write("dãy kết quả tìm kiếm trong mảng fibonaci: " + ketQua);
 </script>
 </body>
 </html>
