@@ -8,9 +8,9 @@
 <script>
     // let arr = [15, 2, 3, 5, 10, 15, 7, 8, 9, 10, 12, 3, 4, 8, 45, 25];
     do {
-        n = (prompt("nhập độ dài mảng"));
+        n = (parseInt(prompt("nhập độ dài mảng")));
 
-        flag = (parseInt(n) == n) && n > 0 && n <= 50;
+        flag = n > 0 && n <= 50;
     } while (!flag);
     n = parseInt(n);
     let arr = new Array(n);

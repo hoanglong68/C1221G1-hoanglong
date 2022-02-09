@@ -6,8 +6,9 @@
 </head>
 <body>
 <script>
-    function str(str) {
-        let arr = str.split(" ");
+    function firstCharacterOfEachString(str) {
+        let newstr = str.trim();
+        let arr = newstr.split(" ");
         let newarr = [];
         if (arr.length > 1) {
             for (let i = 0; i < arr.length; i++) {
@@ -20,10 +21,10 @@
                 result = result + newarr[i].charAt(0).toUpperCase();
             }
             document.write(result);
-        } else document.write("Chuỗi chỉ có 1 từ nên không cần viết tắc");
+        } else document.write("Chuỗi chỉ có 1 từ nên không cần viết tắt");
     }
 
-    str(prompt("enter string"));
+    firstCharacterOfEachString(prompt("enter string"));
 </script>
 </body>
 </html>

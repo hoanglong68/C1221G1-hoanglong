@@ -6,13 +6,19 @@
 </head>
 <body>
 <script>
-    function findArrayInFibonaci() {
+    function findArrayInFibonaci(arr) {
         let fiboArr = [];
         let nextNum;
         let so1 = 0;
         let so2 = 1;
         let newarr = [];
-        for (let i = 1; i <= 20; i++) {
+        let max = arr[0];
+        for (let i = 0; i < arr.length; i++) {
+            if (max < arr[i]) {
+                max = arr[i];
+            }
+        }
+        for (let i = 1; i <= max; i++) {
             fiboArr.push(so1);
             nextNum = so1 + so2;
             so1 = so2;
@@ -33,7 +39,7 @@
         return result;
     }
 
-    let arr = [1, 5, 6, 13, 9, 12, 8, 0, 5, 1, 13];
+    let arr = [1, 5, 6, 13, 9, 12, 8, 0, 5, 1, 21];
     let ketQua = findArrayInFibonaci(arr);
     document.write("dãy kết quả tìm kiếm trong mảng fibonaci: " + ketQua);
 </script>

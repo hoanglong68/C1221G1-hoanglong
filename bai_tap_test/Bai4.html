@@ -5,6 +5,20 @@
     <title>Title</title>
 </head>
 <body>
+<table border="1">
+    <tr>
+        <th>mã tài khoản</th>
+        <th>chủ tài khoản</th>
+        <th>ngân hàng</th>
+        <th>tổng tiền tài khoản</th>
+    </tr>
+    <tr>
+        <td id="code"></td>
+        <td id="nameAccount"></td>
+        <td id="nameBank"></td>
+        <td id="money"></td>
+    </tr>
+</table>
 <script>
     class AccountBank {
         constructor(code, nameAccount, nameBank, money) {
@@ -47,17 +61,20 @@
         }
 
         toString(account) {
-            document.write("mã: " + account.getCode());
-            document.write("<br>");
-            document.write("tên tài khoản: " + account.getNameAccount());
-            document.write("<br>");
-            document.write("tên ngân hàng: " + account.getNameBank());
-            document.write("<br>");
-            document.write("số tiền trong tài khoản: " + account.getMoney());
+            document.getElementById("code").innerText = account.getCode();
+            document.getElementById("nameAccount").innerText = account.getNameAccount();
+            document.getElementById("nameBank").innerText = account.getNameBank();
+            document.getElementById("money").innerText = account.getMoney();
         }
     }
 
-    let account1 = new AccountBank("tcb001", "Long", "Techcombank", 20000);
+    // function taoTaiKhoan(){
+    //         let newCode = prompt("code");
+    //         let newNameAccount = prompt("name");
+    //         let newNameBank = prompt("bank");
+    //         let newMoney = parseInt(prompt("money"));
+    // }
+    let account1 = new AccountBank("tcb002", "Long", "Techcombank", 30000);
     let account2 = new AccountBank("vcb002", "Hoang", "Vietcombank", 40000);
     account1.toString(account1);
     document.write("<br>");
